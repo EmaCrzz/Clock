@@ -1,6 +1,6 @@
 // http://api.timezonedb.com/v2.1/list-time-zone?key=CRR6HH6O928L&format=json&country=NZ
 const API_KEY = "CRR6HH6O928L";
-const BASE_URL = `http://api.timezonedb.com/v2.1/list-time-zone?key=${API_KEY}&format=json&`;
+const BASE_URL = `https://api.timezonedb.com/v2.1/list-time-zone?key=${API_KEY}&format=json&`;
 
 async function callApi(endpoint) {
   const url = BASE_URL + endpoint;
