@@ -26,37 +26,39 @@
       <h1 class="u-h3 text-center">Time Stamp</h1>
       <hr />
     </div>
-    <div class="u-wrapper container-clock">
-      <div id="loader">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <canvas
-        id="canvas"
-        width="250"
-        height="250"
-        class="clock"
-        style="background-color: transparent;"
-      ></canvas>
-      <div id="clock-overlay"></div>
-      <form autocomplete="off">
-        <div class="autocomplete">
-          <label for="input-search" class="input-search-label">
-            Insert country name
-          </label>
-          <input
-            id="input-search"
-            class="input search"
-            type="text"
-            name="input-search"
-            placeholder="Country"
-          />
-          <small id="search-error" class="u-is-hidden error"></small>
+    <main class="u-wrapper main">
+      <h1 id="text-country" class="u-h5 text-country">Time in your country</h1>
+      <div class="container-clock">
+        <canvas
+          id="canvas"
+          width="250"
+          height="250"
+          class="clock"
+          style="background-color: transparent;"
+        ></canvas>
+        <div id="loader">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-      </form>
-    </div>
+        <div id="clock-overlay"></div>
+      </div>
+      <div class="autocomplete">
+        <label for="input-search" class="input-search-label">
+          Search a
+        </label>
+        <input
+          id="input-search"
+          class="input search"
+          type="text"
+          name="input-search"
+          placeholder="Country"
+        />
+        <small id="search-error" class="u-is-hidden error"></small>
+      </div>
+    </main>
+
     <footer id="contact" class="footer">
       <div class="u-wrapper">
         <hr />

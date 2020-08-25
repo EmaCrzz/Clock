@@ -113,17 +113,25 @@ textarea {
   display: none;
 }
 
-.container-clock {
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 88vh;
 }
 
-.autocomplete {
+.container-clock {
   position: relative;
-  display: flex;
-  flex-direction: column;
+}
+
+.clock-overlay {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 220px;
+  height: 220px;
+  top: calc(50% - 110px);
+  left: calc(50% - 110px);
 }
 
 .input {
@@ -156,6 +164,12 @@ textarea {
   color: var(--red);
 }
 
+.autocomplete {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .autocomplete-list {
   min-width: 342px;
   max-height: 200px;
@@ -185,20 +199,11 @@ textarea {
   color: #ffffff;
 }
 
-.clock-overlay {
-  position: absolute;
-  margin-top: -33px;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
-  width: 220px;
-  height: 220px;
-}
-
 .loader {
   z-index: 1500;
-  position: relative;
-  top: 5.8rem;
-  margin-left: -68px;
+  position: absolute;
+  top: calc(50% - 33px);
+  left: calc(50% - 33px);
 }
 
 .loader div {

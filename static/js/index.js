@@ -8,6 +8,7 @@ const search = document.getElementById("input-search");
 const loader = document.getElementById("loader");
 const overlay = document.getElementById("clock-overlay");
 const searchError = document.getElementById("search-error");
+const textCountry = document.getElementById("text-country");
 
 let ctx = canvas.getContext("2d");
 let radius = canvas.height / 2;
@@ -29,6 +30,7 @@ window.addEventListener("load", () => {
 });
 
 const changeTime = async inp => {
+  textCountry.innerHTML = "";
   try {
     loader.classList.add("is-hidden");
     searchError.innerHTML = "";
@@ -43,6 +45,8 @@ const changeTime = async inp => {
       resp += 1;
     }, 1000);
     setTimeout(() => {
+      textCountry.innerHTML = `Time in ${inp.value}`;
+      search.value = "";
       loader.classList.remove("loader");
       overlay.classList.remove("clock-overlay");
     }, 1000);
